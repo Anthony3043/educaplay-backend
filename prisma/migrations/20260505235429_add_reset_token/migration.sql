@@ -1,3 +1,3 @@
 -- AlterTable
-ALTER TABLE "Usuario" ADD COLUMN "resetToken" TEXT;
-ALTER TABLE "Usuario" ADD COLUMN "resetTokenExp" DATETIME;
+ALTER TABLE "Usuario" ADD COLUMN IF NOT EXISTS "resetToken" TEXT;
+ALTER TABLE "Usuario" ADD COLUMN IF NOT EXISTS "resetTokenExp" TIMESTAMP(3);
